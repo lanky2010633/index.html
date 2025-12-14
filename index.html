@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Website</title>
+    <style>
+        /* ဒါက CSS (အလှဆင်တဲ့အပိုင်း) ပါ */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 50px;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 400px;
+            margin: auto;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>မင်္ဂလာပါ!</h1>
+        <p id="message">ဒါက ကျွန်တော် ရေးထားတဲ့ ပထမဆုံး Website ပါ။</p>
+        
+        <button onclick="changeText()">နှိပ်ကြည့်ပါ</button>
+    </div>
+
+    <script>
+        function changeText() {
+            // JavaScript သုံးပြီး စာသားကို လှမ်းပြောင်းလိုက်ခြင်း
+            var messageElement = document.getElementById("message");
+            
+            if (messageElement.innerHTML === "ဒါက ကျွန်တော် ရေးထားတဲ့ ပထမဆုံး Website ပါ။") {
+                messageElement.innerHTML = "ဝမ်းသာပါတယ်! ခင်ဗျား Script ရေးတတ်သွားပါပြီ။ 🎉";
+                messageElement.style.color = "green";
+            } else {
+                messageElement.innerHTML = "ဒါက ကျွန်တော် ရေးထားတဲ့ ပထမဆုံး Website ပါ။";
+                messageElement.style.color = "black";
+            }
+        }
+    </script>
+
+</body>
+</html>
